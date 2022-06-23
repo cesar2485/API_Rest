@@ -2,8 +2,6 @@
 const { Router } = require('express');
 const router = Router();
 
-// const persons = require('./sample.json');
-
 router.get('/', (req, res) => {
     res.json(
 
@@ -27,7 +25,7 @@ router.get('/', (req, res) => {
     );
 })
 
-router.get('/', (req, res) => {
+router.get('/HTML', (req, res) => {
     res.send(
         "<h1>Hola mundo</h1>"
     );
