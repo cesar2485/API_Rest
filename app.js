@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const bobyParser = require('body-parser');
+
+app.use(bodyParser.json());
+const postRoute = require('./routes/post');
+app.use('/servicios', postRoute);
 
 app.get('/', (req, res) => {
    res.send('Primera pagina Web por API Rest');
